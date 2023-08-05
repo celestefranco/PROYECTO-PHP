@@ -1,0 +1,93 @@
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(226, 217, 217);
+}
+
+/*formulario*/
+
+.llenar {
+    display:inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin: .2rem;
+    gap: 1rem;
+    margin-bottom: 20px;
+    margin-left: 200px;
+}
+
+#value{
+    margin-left: 10px;
+}
+
+#uni{
+    margin-left: 35px;
+    width: 150px;
+}
+
+#unf{
+    margin-left: 45px;
+    width: 150px;
+}
+
+.botones {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 700px;
+   
+}
+
+.buton {
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 1rem;
+    margin: 1rem 3rem 1rem 3rem;
+    width: 150px;
+}
+
+.resul{
+    position: absolute;
+    margin-top: 400px; 
+    margin-left: 400px;
+}
+
+.resut{
+    position: absolute;
+    margin-top: 450px; 
+    margin-left: 350px;
+}
+
+select,
+input {
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+/*media query*/
+@media (min-width: 768px) {
+    .navbar-brand{
+        text-align: center;
+    }
+    
+    .navbar-toggler-icon{
+        color: #ffffff;
+     }
+    
+     .nav-link{
+        text-align: center;
+     }
+    
+    .llenar {
+        display:inline-block;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    
+}
