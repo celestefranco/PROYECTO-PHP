@@ -3,7 +3,7 @@ const opcionUnidades = {
     longitud: ['Metro (m)', 'Centimetro (cm)', 'Milimetro (mm)', 'Kilometro (km)'],
     masa: ['Gramo (g)', 'kilogramo (kg)', 'Libra (lb)'],
     volumen: ['Galon (gal)', 'Litro (l)', 'Mililitro (ml)', 'Metro Cubico (m3)'],
-    datos: ['bit', 'byte', 'Kilobytes (KB)', 'Megabytes (MB)', 'Gigabytes (GB)', 'Terabytes (TB)'],
+    datos: ['Bit', 'Bytes', 'Kilobytes (KB)', 'Megabytes (MB)', 'Gigabytes (GB)', 'Terabytes (TB)'],
     moneda: ['Dolar (USD)', 'Euro (EUR)', 'Libra (GBP)', 'Yen (JPY)'],
     tiempo: ['Segundo', 'Minuto', 'Hora', 'Día', 'Semana'],     
   };
@@ -34,8 +34,8 @@ const opcionUnidades = {
         addOption(uniSelect, 'Mililitro (ml)'); 
         addOption(uniSelect, 'Metro Cubico (m3)'); 
     } else if (seleccionarCategoria === 'datos') {
-        addOption(uniSelect, 'bit');
-        addOption(uniSelect, 'byte');
+        addOption(uniSelect, 'Bit');
+        addOption(uniSelect, 'Bytes');
         addOption(uniSelect, 'Kilobytes (KB)');
         addOption(uniSelect, 'Megabytes (MB)');
         addOption(uniSelect, 'Gigabytes (GB)');

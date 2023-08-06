@@ -43,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $convertir->conversion($value, $uni, $unf);
 
         // Mostrando el resultado
-        echo "<h2 class='fw-bold resul'>RESULTADO:</h2>";
-        echo "<h3 class='fw-bold text-center resut'>{$value} {$uni}  es igual a  {$result} {$unf}</h3>";
+        echo "<h2 class='fw-bold  resul'>RESULTADO:</h2>";
+        echo "<h3 class='fw-bold resut'>{$value} {$uni}  es igual a  {$result} {$unf}</h3>";
     }
 }
 

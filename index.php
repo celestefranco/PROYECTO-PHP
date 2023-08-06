@@ -24,7 +24,7 @@
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main>
        <?php
             require_once "./Clases/convertidor.php";
        ?>
@@ -69,7 +69,7 @@
         </form>      
              
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 <script src="./assets/js/unidades.js"></script>
 <script src="./assets/js/limpiar.js"></script>
