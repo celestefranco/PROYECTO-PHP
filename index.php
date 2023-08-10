@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="../PROYECTO PHP/assets/css/style.css">
+    <link rel="stylesheet" href="../PROYECTO PHP2/assets/css/style.css">
     <title>Conversiones Grupo 1</title>
 </head>
 <body>
@@ -24,11 +24,11 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="container">
        <?php
             require_once "./Clases/convertidor.php";
        ?>
-        <h2 class="text-center fw-bold py-4">CALCULADORA DE MEDIDAS</h2>
+        <h1 class="text-center fw-bold py-4">CALCULADORA DE MEDIDAS</h1>
         <form  action="" method="POST">
             <div class="row ">
                 <div class="col-12 col-lg-8 col-sm-6">
@@ -49,28 +49,28 @@
                         <input type="number" name="value" id="value" placeholder="cantidad a convertir" required>
                     </div>
                     <div class="llenar">
-                        <label for="uni">Unidad Inicial: </label>
-                        <select name="uni" id="uni" >
-                        <option value="">--Seleccione--</option>
+                        <label for="uni">De Unidad Inicial:</label>
+                        <select name="uni" id="uni">
+                            <option value="">--Seleccione--</option>
                         </select>  
                     </div>
+                    <br>
                     <div class="llenar">        
-                        <label for="unf">Unidad Final: </label>
+                        <label for="unf"> A Unidad Final:      </label>
                         <select name="unf" id="unf" >
                         <option value="">--Seleccione--</option>
                         </select>  
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 col-sm-6 botones">  
-                    <input type="submit" class="buton btn btn-primary" value="CALCULAR">
-                    <input type="button" class="buton btn btn-danger mt-5" value="LIMPIAR" onclick="clean()">
+                <div class="col-12 col-lg-8 col-sm-6">  
+                    <input type="submit" class="buton btn btn-primary btblue" value="CALCULAR">
+                    <input type="button" class="buton btn btn-danger mt-5 btred" value="LIMPIAR" onclick="clean()">
                 </div>
             </div>
-        </form>      
-             
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        </form>         
+    </main>    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="./assets/js/unidades.js"></script>
 <script src="./assets/js/limpiar.js"></script>
 </html>

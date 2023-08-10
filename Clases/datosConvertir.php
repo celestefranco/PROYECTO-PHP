@@ -20,7 +20,7 @@
         ];
 
         if (!isset($unidades[$uni]) || !isset($unidades[$unf])) {
-            throw new Exception('Invalid units for data conversion.');
+            throw new Exception('Unidades no válidas para la conversión de datos');
         }
 
         $conver = $unidades[$unf] / $unidades[$uni];

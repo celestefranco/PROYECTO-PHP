@@ -4,15 +4,14 @@ function clean() {
     const categorySelect = document.getElementById('categoria');
     const uniSelect = document.getElementById('uni');
     const unfSelect = document.getElementById('unf');
-    const resultprint = document.getElementById('result');
-
-
+    
     // Restableciendo los valores de los elementos del formulario
     valuInput.value = '';
     categorySelect.selectedIndex = 0;
     uniSelect.innerHTML = '';
     unfSelect.innerHTML = '';
-    resultprint.innerHTML = '';
+    document.getElementById('result').innerHTML = ''; 
 }
  
+
 

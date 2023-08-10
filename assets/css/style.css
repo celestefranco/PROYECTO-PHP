@@ -1,7 +1,7 @@
 body {
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(226, 217, 217);
+    background-color: #e2d9d9;
 }
 
 /*formulario*/
@@ -11,36 +11,13 @@ body {
     flex-direction: column;
     align-items: center;
     margin: .2rem;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 20px;
     margin-left: 200px;
+    
 }
 
-#value{
-    margin-left: 10px;
-}
-
-#uni{
-    margin-left: 35px;
-    width: 150px;
-}
-
-#unf{
-    margin-left: 45px;
-    width: 150px;
-}
-
-.botones {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-    margin-left: 700px;
-   
-}
-
-.buton {
+.buton {    
     font-weight: 600;
     font-size: 18px;
     color: white;
@@ -51,16 +28,29 @@ body {
     width: 150px;
 }
 
-.resul{
+.btblue{
     position: absolute;
-    margin-top: 400px; 
-    margin-left: 400px;
+    top: 200px; 
+    margin-left: 700px;
+}
+
+.btred{
+    position: absolute;
+    top: 300px; 
+    margin-left: 700px;
 }
 
 .resut{
     position: absolute;
-    margin-top: 450px; 
     text-align: center;
+    margin-top: 400px; 
+    margin-left: 500px;
+}
+
+.resul{
+    position: absolute;
+    margin-top: 450px; 
+    margin-left: 350px;
 }
 
 select,
@@ -84,26 +74,31 @@ input {
      }
     
      .llenar {
-        margin-left: 0;
+       columns: auto;
+
     }
     
     #value{
-        margin-left: 0;
+        margin-left: auto;
     }
     
     #uni{
-        margin-left: 0;
+        margin-left: auto;
         width: 150px;
     }
     
     #unf{
-        margin-left: 0;
+        margin-left: auto;
         width: 150px;
     }
     
     .botones {
-        margin-top: 400px;
-        margin-left: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 100px;
        
     }
 }
