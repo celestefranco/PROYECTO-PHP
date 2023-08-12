@@ -4,6 +4,7 @@
 // Cargando las clases necesarias
 require_once "./Clases/conversion.php";
 require_once "./Clases/datosConvertir.php";
+require_once "./Clases/monedaConvertir.php";
 require_once "./index.php";
 
 // Verificando la respuesta del Metodo usado en el form, obteniendo los valores del form

@@ -4,7 +4,7 @@ const opcionUnidades = {
     masa: ['Gramo (g)', 'kilogramo (kg)', 'Libra (lb)'],
     volumen: ['Galon (gal)', 'Litro (l)', 'Mililitro (ml)', 'Metro Cubico (m3)'],
     datos: ['bit', 'byte', 'Kilobytes (KB)', 'Megabytes (MB)', 'Gigabytes (GB)', 'Terabytes (TB)'],
-    moneda: ['Dolar (USD)', 'Euro (EUR)', 'Libra (GBP)', 'Yen (JPY)'],
+    moneda: ['Dolar (USD)', 'Euro (EUR)', 'Libra (GBP)', 'Yen (JPY)', 'Peso (Col)', 'Franco (Suizo)', 'Colon(C)'],
     tiempo: ['Segundo', 'Minuto', 'Hora', 'Día', 'Semana'],     
   };
 
@@ -44,7 +44,10 @@ const opcionUnidades = {
         addOption(uniSelect, 'Dolar (USD)');
         addOption(uniSelect, 'Euro (EUR)');
         addOption(uniSelect, 'Libra (GBP)');
-        addOption(uniSelect, 'Ten (JPY)');
+        addOption(uniSelect, 'Yen (JPY)');
+        addOption(uniSelect, 'Peso (Col)');
+        addOption(uniSelect, 'Franco (Suizo)');
+        addOption(uniSelect, 'Colon(C)');
     } else if (seleccionarCategoria === 'tiempo') {
         addOption(uniSelect, 'Segundo');
         addOption(uniSelect, 'Minuto');
