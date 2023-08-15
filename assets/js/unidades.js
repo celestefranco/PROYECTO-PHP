@@ -1,10 +1,10 @@
 // Asignación de categorías a sus respectivas unidades
 const opcionUnidades = {
-    longitud: ['Metro (m)', 'Centimetro (cm)', 'Milimetro (mm)', 'Kilometro (km)'],
-    masa: ['Gramo (g)', 'kilogramo (kg)', 'Libra (lb)'],
+    longitud: ['Metro (m)', 'Decimetro (dm)', 'Centimetro (cm)', 'Milimetro (mm)', 'Decametro (dam)', 'Hectometro (hm)', 'Kilometro (km)', 'Pulgada (plg)'],
+    masa: ['Gramo (g)', 'kilogramo (kg)', 'Libra (lb)', 'Tonelada (Ton)'],
     volumen: ['Galon (gal)', 'Litro (l)', 'Mililitro (ml)', 'Metro Cubico (m3)'],
-    datos: ['bit', 'byte', 'Kilobytes (KB)', 'Megabytes (MB)', 'Gigabytes (GB)', 'Terabytes (TB)'],
-    moneda: ['Dolar (USD)', 'Euro (EUR)', 'Libra (GBP)', 'Yen (JPY)'],
+    datos: ['Bit', 'Bytes', 'Kilobytes (KB)', 'Megabytes (MB)', 'Gigabytes (GB)', 'Terabytes (TB)'],
+    moneda: ['Dolar (USD)', 'Euro (EUR)', 'Franco (Suizo)', 'Peso (Col)', 'Yen (JPY)', 'Libra (GBP)', 'Colon(C)'],
     tiempo: ['Segundo', 'Minuto', 'Hora', 'Día', 'Semana'],     
   };
 
@@ -21,21 +21,26 @@ const opcionUnidades = {
     // Rellenando el select "Unidad Inicial" con unidades basadas en la categoría seleccionada
     if (seleccionarCategoria === 'longitud') {
         addOption(uniSelect, 'Metro (m)');
+        addOption(uniSelect, 'Decimetro (dm)');
         addOption(uniSelect, 'Centimetro (cm)');
         addOption(uniSelect, 'Milimetro (mm)');
+        addOption(uniSelect, 'Decametro (dam)');
+        addOption(uniSelect, 'Hectometro (hm)');
         addOption(uniSelect, 'Kilometro (km)');
+        addOption(uniSelect, 'Pulgada (plg)');
     } else if (seleccionarCategoria === 'masa') {
         addOption(uniSelect, 'Gramo (g)');
         addOption(uniSelect, 'Kilogramo (kg)');       
         addOption(uniSelect, 'Libra (lb)');
+        addOption(uniSelect, 'Tonelada (Ton)');
     } else if (seleccionarCategoria === 'volumen') {
         addOption(uniSelect, 'Galon (gal)');
         addOption(uniSelect, 'Litro (l)');       
         addOption(uniSelect, 'Mililitro (ml)'); 
         addOption(uniSelect, 'Metro Cubico (m3)'); 
     } else if (seleccionarCategoria === 'datos') {
-        addOption(uniSelect, 'bit');
-        addOption(uniSelect, 'byte');
+        addOption(uniSelect, 'Bit');
+        addOption(uniSelect, 'Bytes');
         addOption(uniSelect, 'Kilobytes (KB)');
         addOption(uniSelect, 'Megabytes (MB)');
         addOption(uniSelect, 'Gigabytes (GB)');
@@ -43,8 +48,11 @@ const opcionUnidades = {
     } else if (seleccionarCategoria === 'moneda') {
         addOption(uniSelect, 'Dolar (USD)');
         addOption(uniSelect, 'Euro (EUR)');
+        addOption(uniSelect, 'Franco (Suizo)');
+        addOption(uniSelect, 'Peso (Col)');
+        addOption(uniSelect, 'Yen (JPY)');
         addOption(uniSelect, 'Libra (GBP)');
-        addOption(uniSelect, 'Ten (JPY)');
+        addOption(uniSelect, 'Colon(C)');
     } else if (seleccionarCategoria === 'tiempo') {
         addOption(uniSelect, 'Segundo');
         addOption(uniSelect, 'Minuto');
@@ -66,10 +74,6 @@ function addOption(selectElement, optionValue) {
     selectElement.appendChild(option);
 }
 
- 
-  // Añadiendo un receptor de eventos a la selección 'categoria' para llamar a la función en caso de cambio.
-  document.getElementById('categoria').addEventListener('change', unidadesConversion);
-  
-  // Llamando a la función inicialmente para rellenar las unidades basadas en la categoría por defecto
+   // Llamando a la función inicialmente para rellenar las unidades basadas en la categoría por defecto
   unidadesConversion();
   

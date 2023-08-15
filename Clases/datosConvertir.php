@@ -7,32 +7,26 @@
 
    class datosConvertir extends conversion
    {
+    
        public function conversion($value, $uni, $unf)
        {
-        $unidades = [
-          'bit' => 1,
-          'byte' => 8,
-          'kilobyte' => 8 * 1024,
-          'megabyte' => 8 * 1024 * 1024,
-          'gigabyte' => 8 * 1024 * 1024 * 1024,
-          'terabyte' => 8 * 1024 * 1024 * 1024 * 1024
+          $unidades = [
+            'Bit' => 1,
+            'Bytes' => 8,
+            'Kilobytes (KB)' => 8 * 1024,
+            'Megabytes (MB)' => 8 * 1024 * 1024,
+            'Gigabytes (GB)' => 8 * 1024 * 1024 * 1024,
+            'Terabytes (TB)' => 8 * 1024 * 1024 * 1024 * 1024
         ];
-  
+
         if (!isset($unidades[$uni]) || !isset($unidades[$unf])) {
-            throw new Exception('Invalid unidades for data conversion.');
+            throw new Exception('Unidades no válidas para la conversión de datos');
         }
-  
-        $conversionRatio = $unidades[$unf] / $unidades[$uni];
-        $result = $value * $conversionRatio;
-  
+
+        $conver = $unidades[$unf] / $unidades[$uni];
+        $result = $value * $conver;
+
         return $result;
-       }
+      }
    }
-   
-      
-      
-
-   
-   
-
 ?>

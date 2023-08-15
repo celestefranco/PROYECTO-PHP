@@ -1,43 +1,33 @@
+*{
+    margin: 0;
+}
+
 body {
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(226, 217, 217);
+    background-color: #e2d9d9;
 }
 
-/*formulario*/
+/* Calculadora */
+.nav-link:hover{
+    color:white;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 .llenar {
-    display:inline-block;
-    flex-direction: column;
+    display: inline-block;
     align-items: center;
-    margin: .2rem;
-    gap: 1rem;
     margin-bottom: 20px;
-    margin-left: 200px;
-}
-
-#value{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #uni{
     margin-left: 35px;
-    width: 150px;
 }
 
 #unf{
     margin-left: 45px;
-    width: 150px;
-}
-
-.botones {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-    margin-left: 700px;
-   
 }
 
 .buton {
@@ -51,16 +41,23 @@ body {
     width: 150px;
 }
 
-.resul{
-    position: absolute;
-    margin-top: 400px; 
-    margin-left: 400px;
+.botones{
+    display:inline-block;
+    margin-top: 5px;
+    margin-left: 350px;
 }
 
 .resut{
     position: absolute;
-    margin-top: 450px; 
-    margin-left: 350px;
+    text-align: center;
+    margin-top: 500px; 
+    margin-left: 500px;
+}
+
+.resul{
+    position: fixed;   
+    margin-top: 550px;    
+    margin-left: 250px;
 }
 
 select,
@@ -69,25 +66,100 @@ input {
     border-radius: 1rem;
 }
 
+/* Team */
+.integrante {
+    padding-top: .7rem;
+    background-color: #010120;
+    width: 300px;
+    border-radius: 1rem;
+    padding-bottom: .7rem;
+}
+.figura-tope {
+    padding-top: .7rem;
+    width: 140px;
+    background-color: rgb(1, 1, 32);
+    position: relative;
+    height: 140px;
+    border-radius: 5rem;
+    margin: 0 auto;
+}
+.figura {
+    background: rgb(10,237,170);
+    background: linear-gradient(257deg, rgba(10,237,170,1) 0%, rgba(130,7,245,1) 100%);
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    animation: anime 1.5s infinite; 
+    animation-timing-function: linear;
+    box-shadow: 0 0 5px rgb(10,237,170);
+}
+
+@keyframes anime{
+    0%{rotate: 0deg;}
+    100%{rotate: 360deg;}
+}
+.figura-tope img{
+    border-radius: 100%;
+    height: 125px;
+    width: 125px;
+    top: 7.5px;
+    left: 7.5px;
+    background-color: rgb(1, 1, 32);
+    position: absolute;
+}
+.nombre,
+.email,
+.github {
+    margin: .1rem;
+    color: orangered;
+}
+span {
+    color: white;
+    font-size: small;
+}
+
+.elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+
 /*media query*/
-@media (min-width: 768px) {
-    .navbar-brand{
-        text-align: center;
-    }
-    
+@media (max-width: 570px){
     .navbar-toggler-icon{
+        align-items: center;
         color: #ffffff;
-     }
-    
-     .nav-link{
-        text-align: center;
-     }
-    
-    .llenar {
-        display:inline-block;
+    }
+    form{
+        width: 97%;
+        display: flex;
         flex-direction: column;
         align-items: center;
-       
+    }
+   
+    .botones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+    }
+   
+    .resut{
+        margin-top: 650px;
+        margin-left: 100px;
+    }
+    
+    .resul{
+        margin-top: 700px;
+        margin-left: 20px;
+    }
+    .integrante {
+        margin-left: auto;
     }
     
 }

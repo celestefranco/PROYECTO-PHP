@@ -2,9 +2,14 @@
 // Procesando los datos del formulario y realizar las conversiones
 
 // Cargando las clases necesarias
-require_once "./Clases/conversion.php";
-require_once "./Clases/datosConvertir.php";
 require_once "./index.php";
+require_once "./Clases/conversion.php";
+require_once "./Clases/longitudConvertir.php";
+require_once "./Clases/masaConvertir.php";
+require_once "./Clases/volumenConvertir.php";
+require_once "./Clases/datosConvertir.php";
+require_once "./Clases/tiempoConvertir.php";
+require_once "./Clases/monedaConvertir.php";
 
 // Verificando la respuesta del Metodo usado en el form, obteniendo los valores del form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -22,6 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'masa':
                 $convertir = new masaConvertir();
                 break;
+            case 'volumen':
+                $convertir = new volumenConvertir();
+                break;
             case 'datos':
                 $convertir = new datosConvertir();
                 break;
@@ -30,10 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 break;
             case 'moneda':
                 $convertir = new monedaConvertir();
-                break;
-            case 'volumen':
-                $convertir = new volumenConvertir();
-                break;
+                break;            
             default:
                 echo "Categoría de unidad no válida";
                 exit;
@@ -43,11 +48,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $convertir->conversion($value, $uni, $unf);
 
         // Mostrando el resultado
-        echo "<h2 class='fw-bold resul'>RESULTADO:</h2>";
-        echo "<h3 class='fw-bold text-center resut'>{$value} {$uni}  es igual a  {$result} {$unf}</h3>";
+?>      
+        <html>  
+            <div id="result">   
+               <h2 class="fw-bold fs-3 text-center resut">RESULTADO:</h2>                    
+               <h3 class="fw-bold fs-3 justify-content-center resul" > <?php echo "{$value} {$uni}  es igual a {$result} {$unf}" ?></h3>
+            </div>
+        </html>
+<?php       
+        }
     }
-}
-
 
 ?>
 

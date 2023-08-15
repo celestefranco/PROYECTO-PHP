@@ -1,76 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../PROYECTO PHP/assets/css/style.css">
+    <link rel="icon" href="./assets/img/favicon-96x96.png" type="image/png" />
     <title>Conversiones Grupo 1</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar-dark navbar-expand-lg bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand d-flex flex-column text-center fs-3 fw-bold" href="./index.php">GRUPO #1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <div class="navbar-nav m-auto py-0 gap-3 fs-3 fw-bold">
-                        <a href="./index.php" class="nav-item nav-link active">Calculadora</a>
-                        <a href="#about" class="nav-item nav-link">Team</a> 
-                    </div>           
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php
+        include "./header.php";
+    ?>
     <main class="container">
-       <?php
-            require_once "./Clases/convertidor.php";
-       ?>
-        <h2 class="text-center fw-bold py-4">CALCULADORA DE MEDIDAS</h2>
-        <form  action="" method="POST">
-            <div class="row ">
-                <div class="col-12 col-lg-8 col-sm-6">
-                    <div class="llenar"> 
-                        <label for="categoria">Unidad de Medida:</label>
-                        <select name="categoria" id="categoria" >
-                            <option value="">--Seleccione Medida--</option>
-                            <option value="longitud">Longitud</option>
-                            <option value="masa">Masa</option>
-                            <option value="volumen">Volumen</option>
-                            <option value="datos">Datos</option>
-                            <option value="moneda">Moneda</option>
-                            <option value="tiempo">Tiempo</option>
-                        </select>   
-                    </div>              
-                    <div class="llenar">            
-                        <label for="">Valor a Convertir:</label>
-                        <input type="number" name="value" id="value" placeholder="cantidad a convertir" required>
-                    </div>
-                    <div class="llenar">
-                        <label for="uni">Unidad Inicial: </label>
-                        <select name="uni" id="uni" >
-                        <option value="">--Seleccione--</option>
-                        </select>  
-                    </div>
-                    <div class="llenar">        
-                        <label for="unf">Unidad Final: </label>
-                        <select name="unf" id="unf" >
-                        <option value="">--Seleccione--</option>
-                        </select>  
+        <?php
+        require_once "./Clases/convertidor.php";
+        ?>
+
+        <h1 class="text-center fw-bold py-5 mt-5">CALCULADORA DE MEDIDAS</h1>
+        <form action="" method="POST">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-3 d-flex justify-content-center">
+                    <label class="mr-sm-2 sr-only" for="categoria">UNIDAD DE MEDIDA:</label>
+                    <select class="custom-select mr-sm-2" name="categoria" id="categoria">
+                        <option selected>Seleccione Medida...</option>
+                        <option value="longitud">Longitud</option>
+                        <option value="masa">Masa</option>
+                        <option value="volumen">Volumen</option>
+                        <option value="datos">Datos</option>
+                        <option value="moneda">Moneda</option>
+                        <option value="tiempo">Tiempo</option>
+                    </select>
+                </div>
+                <div class="col-auto my-3 d-flex justify-content-center">
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                        <label class="custom-control-label" for="customControlAutosizing">VALOR A CONVERTIR:</label>
+                        <input type="number" name="value" class="custom-control-input" id="value" placeholder="Cantidad a convertir" required>                        
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 col-sm-6 botones">  
-                    <input type="submit" class="buton btn btn-primary" value="CALCULAR">
-                    <input type="button" class="buton btn btn-danger mt-5" value="LIMPIAR" onclick="clean()">
+                <div class="col-auto my-3 d-flex justify-content-center">
+                    <label class="mr-sm-2 sr-only" for="uni">UNIDAD INICIAL:</label>
+                    <select class="custom-select mr-sm-2" name="uni" id="uni">
+                        <option selected>Seleccione Medida...</option>                        
+                    </select>
+                </div>
+                <div class="col-auto my-3 d-flex justify-content-center">
+                    <label class="mr-sm-2 sr-only" for="unf">UNIDAD FINAL:</label>
+                    <select class="custom-select mr-sm-2" name="unf" id="unf">
+                        <option selected>Seleccione Medida...</option>                        
+                    </select>
+                </div>
+                <div class="col-auto my-3 botones">
+                    <input type="submit" class="buton btn btn-primary btblue" value="CALCULAR">
+                    <input type="button" class="buton btn btn-danger btred" value="LIMPIAR" onclick="clean()">
                 </div>
             </div>
-        </form>      
-             
+        </form>
     </main>
-    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="./assets/js/unidades.js"></script>
 <script src="./assets/js/limpiar.js"></script>
+
 </html>
